@@ -1,0 +1,7 @@
+README.txt
+book_example.py
+setup.py
+book_example.egg-info/PKG-INFO
+book_example.egg-info/SOURCES.txt
+book_example.egg-info/dependency_links.txt
+book_example.egg-info/top_level.txt
