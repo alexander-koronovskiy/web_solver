@@ -21,8 +21,8 @@ def do_search() -> 'html':
     title = 'Here are your results:'
 
     lines = s.put_strings(phrase)
-    nums = [re.findall(r'\d*\.\d+|\d+', lines[i]) for i in range(len(lines))]
-    results = nums
+    matrix = s.put_matrix(lines)
+    results = matrix
 
     log_request(request, results)
     return render_template('results.html',
