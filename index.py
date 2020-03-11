@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, escape
-import re
 import solver as s
 
 app = Flask(__name__)
@@ -19,10 +18,7 @@ def do_search() -> 'html':
     phrase = request.form['phrase']
     letters = request.form['letters']
     title = 'Here are your results:'
-
-    lines = s.put_strings(phrase)
-    matrix = s.put_matrix(lines)
-    results = matrix
+    results = s.put_matrix(phrase)
 
     log_request(request, results)
     return render_template('results.html',
