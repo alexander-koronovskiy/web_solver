@@ -16,7 +16,6 @@ def log_request(req: 'flask_request', res: str) -> None:
 def do_search() -> 'html':
 
     phrase = request.form['phrase']
-    letters = request.form['letters']
     title = 'Here are your results:'
     results = s.put_matrix(phrase)
 
@@ -24,7 +23,6 @@ def do_search() -> 'html':
     return render_template('results.html',
                            the_title=title,
                            the_phrase=phrase,
-                           the_letters=letters,
                            the_results=results,)
 
 
@@ -32,7 +30,7 @@ def do_search() -> 'html':
 @app.route('/entry')
 def entry_page() -> 'html':
     return render_template('entry.html',
-                           the_title='Welcome to search4letters on the web!')
+                           the_title='Solver of linear equation pre-alpha version')
 
 
 @app.route('/viewlog')

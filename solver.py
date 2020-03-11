@@ -4,7 +4,6 @@ import re, numpy as np
 def put_matrix(phrase):
     """
     method for solution eq matrix by eq phrase
-
     :param phrase: equation phrase
     :return: eq matrix solution
     """
@@ -15,6 +14,11 @@ def put_matrix(phrase):
     for i in range(len(fragments)):
         if fragments[i][0] not in '1234567890*+-=':
             fragments[i] = '1' + fragments[i]
+
+    # negative coefficient check
+    for i in range(len(fragments) - 1):
+        if fragments[i][0] is '-' and len(fragments[i]) == 1:
+            fragments[i + 1] = '-' + fragments[i + 1]
 
     # matrix fragmentation
     eq_m = []
@@ -34,7 +38,7 @@ def put_matrix(phrase):
 
 
 def ext_matrix(lines):
-    nums = [re.findall(r'\d*\.\d+|\d+', lines[i]) for i in range(len(lines))]
+    nums = [re.findall(r'[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?', lines[i]) for i in range(len(lines))]
     matrix0 = np.array(list(filter(None, [[float(i) for i in line] for line in nums])))
     matrix = [i[0] for i in matrix0]
     return matrix
