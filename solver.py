@@ -8,14 +8,7 @@ def put_strings(phrase):
     :param phrase: request phrase
     :return: list of equation strings
     """
-    start = -1
-    lines = []
-    for i in range(len(phrase)):
-        if phrase[i] == '\n':
-            lines.append(phrase[start+1:i-1])
-            start = i
-    lines.append(phrase[start + 1:len(phrase)])
-    return list(filter(None, lines))
+    return phrase.split()
 
 
 def put_matrix(lines):
@@ -25,9 +18,16 @@ def put_matrix(lines):
     :param lines: list of equation strings
     :return: eq matrix
     """
+    # lines = phrase.split()
+
+    for i in range(len(lines)):
+        if lines[i][0] not in '1234567890+-=':
+            lines[i] = '1' + lines[i]
+
+    # нахождение всех чисел - запись в матрицу
     nums = [re.findall(r'\d*\.\d+|\d+', lines[i]) for i in range(len(lines))]
     matrix = [[float(i) for i in line] for line in nums]
-    return matrix
+    return list(filter(None, matrix))
 
 
 def solve_linear(matrix):

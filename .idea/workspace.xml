@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fd5b09a-a5ab-413b-a4ee-36e41b203a51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/solver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vsearch.log" beforeDir="false" afterPath="$PROJECT_DIR$/vsearch.log" afterDir="false" />
     </list>
@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="175">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -57,8 +57,9 @@
         <option value="$PROJECT_DIR$/adds/mp.py" />
         <option value="$PROJECT_DIR$/templates/entry.html" />
         <option value="$PROJECT_DIR$/mp.py" />
-        <option value="$PROJECT_DIR$/solver.py" />
+        <option value="$PROJECT_DIR$/qqq.py" />
         <option value="$PROJECT_DIR$/index.py" />
+        <option value="$PROJECT_DIR$/solver.py" />
       </list>
     </option>
   </component>
@@ -88,7 +89,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mp.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/qqq.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.buildout.BuildoutModulesConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -103,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.index">
+  <component name="RunManager" selected="Python.qqq">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="book examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,7 +168,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mp" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="qqq" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="book examples" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -179,7 +180,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qqq.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,7 +192,7 @@
     <list>
       <item itemvalue="Python.index" />
       <item itemvalue="Python.db_connector" />
-      <item itemvalue="Python.mp" />
+      <item itemvalue="Python.qqq" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -320,6 +321,13 @@
     <entry file="file://$PROJECT_DIR$/vsearch.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/qqq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -332,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="175">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
