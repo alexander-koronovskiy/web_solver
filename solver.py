@@ -35,17 +35,19 @@ def put_matrix(phrase):
     # solution
     if sol_m and eq_m:
 
-        l = ' '.join(eq_m[0])
-        for i in set(l) - set('1234567890*+-= '):
-            if not Counter(l).get(i) == 1:
-                print('exception')
-
+        # check for solution opportunity of equation
         system = [ext_matrix(eq_m[i]) for i in range(len(eq_m))]
         solution = ext_matrix(sol_m)
         try:
             ans = np.linalg.solve(system, solution)
         except np.linalg.LinAlgError:
             ans = 'cannot solve matrix. Check the description'
+
+        # check for unique variables of equation
+        l = ' '.join(eq_m[0])
+        for i in set(l) - set('1234567890*+-= '):
+            if not Counter(l).get(i) == 1:
+                ans = 'cannot solve matrix. Check the description'
 
     else:
         ans = 'you entered the empty value'
