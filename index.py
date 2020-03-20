@@ -27,9 +27,14 @@ def do_search() -> 'html':
 
 
 @app.route('/')
-@app.route('/entry')
+def title_page() -> 'html':
+    return render_template('title.html',
+                           the_title='Welcome to WebSolver')
+
+
+@app.route('/linear')
 def entry_page() -> 'html':
-    return render_template('entry.html',
+    return render_template('linear.html',
                            the_title='Solver of linear equation pre-alpha version')
 
 
