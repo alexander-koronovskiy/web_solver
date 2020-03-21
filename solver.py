@@ -59,6 +59,3 @@ def ext_matrix(lines):
     matrix0 = np.array(list(filter(None, [[float(i) for i in line] for line in nums])))
     matrix = [i[0] for i in matrix0]
     return matrix
-
-# x + y = -3
-# 2x - 5y = 45

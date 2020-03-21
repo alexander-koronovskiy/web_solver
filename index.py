@@ -27,6 +27,7 @@ def do_search() -> 'html':
 
 
 @app.route('/')
+@app.route('/index')
 def title_page() -> 'html':
     return render_template('title.html',
                            the_title='Welcome to WebSolver')
