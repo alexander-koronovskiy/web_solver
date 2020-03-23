@@ -4,7 +4,7 @@
 
 <h2>{{ the_title }}</h2>
 
-<form method='POST' action='/search4'>
+<form method='POST' action='/diff_solve'>
 <table>
 <p>Use this form to solve your equation:</p>
 <tr><td>Linear Equation:</td><td><textarea name='phrase' type='TEXT' width='60'></textarea></td></tr>
@@ -13,6 +13,6 @@
 <p><input value='Do it!' type='SUBMIT'></p>
 </form>
 
-{% include '/description/linear.html' %}
+{% include '/differential/description.html' %}
 
 {% endblock %}

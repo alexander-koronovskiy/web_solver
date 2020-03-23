@@ -12,15 +12,29 @@ def log_request(req: 'flask_request', res: str) -> None:
         print(res, file=log, end='|')
 
 
-@app.route('/search4', methods=['POST'])
-def do_search() -> 'html':
+@app.route('/lin_solve', methods=['POST'])
+def do_linear() -> 'html':
 
     phrase = request.form['phrase']
     title = 'Here are your results:'
     results = s.put_matrix(phrase)
 
     log_request(request, results)
-    return render_template('results.html',
+    return render_template('linear/results.html',
+                           the_title=title,
+                           the_phrase=phrase,
+                           the_results=results,)
+
+
+@app.route('/diff_solve', methods=['POST'])
+def do_differential() -> 'html':
+
+    phrase = request.form['phrase']
+    title = 'Here are your results:'
+    results = s.put_matrix(phrase)
+
+    log_request(request, results)
+    return render_template('differential/results.html',
                            the_title=title,
                            the_phrase=phrase,
                            the_results=results,)
@@ -34,9 +48,15 @@ def title_page() -> 'html':
 
 
 @app.route('/linear')
-def entry_page() -> 'html':
-    return render_template('linear.html',
+def lin_page() -> 'html':
+    return render_template('linear/page.html',
                            the_title='Solver of linear equation pre-alpha version')
+
+
+@app.route('/differential')
+def diff_page() -> 'html':
+    return render_template('differential/page.html',
+                           the_title='Solver of differential equation pre-alpha version')
 
 
 @app.route('/viewlog')

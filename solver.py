@@ -39,7 +39,7 @@ def put_matrix(phrase):
         system = [ext_matrix(eq_m[i]) for i in range(len(eq_m))]
         solution = ext_matrix(sol_m)
         try:
-            ans = np.linalg.solve(system, solution)
+            ans = sol(system, solution, eq_type='linear')
         except np.linalg.LinAlgError:
             ans = 'cannot solve matrix. Check the description'
 
@@ -59,3 +59,11 @@ def ext_matrix(lines):
     matrix0 = np.array(list(filter(None, [[float(i) for i in line] for line in nums])))
     matrix = [i[0] for i in matrix0]
     return matrix
+
+
+def sol(system, solution, eq_type):
+    if eq_type == 'linear':
+        ans = np.linalg.solve(system, solution)
+    if eq_type == 'differential':
+        ans = 'differential equation was solved'
+    return ans

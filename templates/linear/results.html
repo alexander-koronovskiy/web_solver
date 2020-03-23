@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+<table>
+<tr><td>Your equation:</td><td>{{ the_phrase }}</td></tr>
+</table>
+
+<p>Solver of equation "{{the_phrase }}" is results are returned:</p>
+<h3>{{ the_results }}</h3>
+
+{% endblock %}

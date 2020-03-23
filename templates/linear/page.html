@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/lin_solve'>
+<table>
+<p>Use this form to solve your equation:</p>
+<tr><td>Linear Equation:</td><td><textarea name='phrase' type='TEXT' width='60'></textarea></td></tr>
+</table>
+<p>When you're ready, click this button:</p>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+
+{% include '/linear/description.html' %}
+
+{% endblock %}
